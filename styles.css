@@ -1,0 +1,109 @@
+body{
+    background-color: #393E46;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.main-container{
+    padding: 0 5%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-template-areas: 
+
+    "heading heading"
+    "dice1 dice2";
+    column-gap: 1.5rem;
+    
+}
+
+h1{
+    letter-spacing: 1.3rem;
+    margin: 2% 0;
+    font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 #232931;
+    font-size: 8rem;
+    color: #4ECCA3;
+    
+
+}
+
+
+.heading{
+    grid-area: heading;
+    align-self: center;
+
+    
+}
+.dice1{
+    grid-area: dice1;
+    justify-self: end;
+
+
+}
+.dice2{
+    grid-area: dice2;
+    justify-self: start;
+}    
+
+img{
+    max-width: 100%;
+}
+
+p{
+    font-size: 2rem;
+    color: #4ECCA3;
+    font-family: 'Indie Flower', cursive;
+}
+
+footer{
+    margin: 2% auto;
+    font-size: 3rem;
+    color: #4ECCA3;
+}
+.btn{
+    margin-top: 5%;
+}
+
+.hide{
+    display: none;
+}
+.winner{
+    display: none;
+}
+
+.decide-winner{
+    display: block;
+
+}
+
+@media (max-width:900px){
+    h1{
+        letter-spacing: normal;
+        font-size: 5rem;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .btn{
+        margin-top: 5%;
+    }
+
+}
+
+
+
+   
+@media (max-width:443px){
+    .main-container{
+        margin-bottom: 5%;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,0.5fr);
+
+    }
+
+
+}
