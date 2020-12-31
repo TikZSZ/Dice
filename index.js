@@ -8,13 +8,11 @@ function random2(){
  
     var rando2 = Math.floor(Math.random()*6+1)
     return rando2;
-
 }
 
 
-
-
 function winner(rando1,rando2){
+    
     var winner_class=document.getElementsByClassName('winner');
     if(rando1===rando2){
         winner_class[0].classList.add("decide-winner")
@@ -28,11 +26,14 @@ function winner(rando1,rando2){
     }
 }
 function logic(){
+    
     rando1=random1();
     rando2=random2();
+    
     var p = document.querySelectorAll('.dice');
     p[0].classList.remove("hide")
     p[1].classList.remove("hide")
+    
     var d = document.getElementsByClassName('dice');
 
     var img1 = new Image();
@@ -47,8 +48,6 @@ function logic(){
 }
 
 function poper(){
-
-
     var winner_class=document.getElementsByClassName('winner');
     if(rando1===rando2){
         winner_class[0].classList.remove("decide-winner")
@@ -57,7 +56,6 @@ function poper(){
         
     }else{
         winner_class[2].classList.remove("decide-winner")
-
     }
 
     var c = document.querySelectorAll('.dice img');
@@ -67,16 +65,9 @@ function poper(){
     var d = document.querySelectorAll('.dice');
     d[0].classList.add("hide")
     d[1].classList.add("hide")
-    logic();
-
-
-
-
-
     
-
-
-
+    logic();
 }
+
 logic();
 
